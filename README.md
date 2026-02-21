@@ -2,6 +2,14 @@
 
 A retro space-age colorscheme for Neovim.
 
+## Screenshots
+
+### Default
+![Default variant](screenshots/default.png)
+
+### Dark
+![Dark variant](screenshots/dark.png)
+
 ## Installation
 
 Using [lazy.nvim](https://github.com/folke/lazy.nvim):
@@ -19,7 +27,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ## Dark Variant
 
-Atomic ships with a dark variant that uses near-black backgrounds (`#080808`) instead of the default blue-teal. Great for OLED displays and high-contrast setups. All accent colors stay the same.
+Atomic ships with a dark variant that uses near-black backgrounds (`#111111`) instead of the default blue-teal. Great for OLED displays and high-contrast setups. All accent colors stay the same.
 
 ```lua
 -- Option 1: Use the colorscheme command directly
