@@ -1,0 +1,30 @@
+local M = {}
+
+function M.apply(hi, c)
+  hi("CmpItemAbbr",              { fg = c.fg_dim })
+  hi("CmpItemAbbrMatch",         { fg = c.orange, bold = true })
+  hi("CmpItemAbbrMatchFuzzy",    { fg = c.orange })
+  hi("CmpItemAbbrDeprecated",    { fg = c.fg_muted, strikethrough = true })
+  hi("CmpItemKindDefault",       { fg = c.fg_muted })
+  hi("CmpItemKindFunction",      { fg = c.teal })
+  hi("CmpItemKindMethod",        { fg = c.teal })
+  hi("CmpItemKindVariable",      { fg = c.fg })
+  hi("CmpItemKindKeyword",       { fg = c.orange })
+  hi("CmpItemKindField",         { fg = c.fg })
+  hi("CmpItemKindProperty",      { fg = c.fg })
+  hi("CmpItemKindClass",         { fg = c.yellow })
+  hi("CmpItemKindStruct",        { fg = c.yellow })
+  hi("CmpItemKindInterface",     { fg = c.yellow })
+  hi("CmpItemKindModule",        { fg = c.blue })
+  hi("CmpItemKindSnippet",       { fg = c.pink })
+  hi("CmpItemKindText",          { fg = c.fg_dim })
+  hi("CmpItemKindConstant",      { fg = c.amber })
+  hi("CmpItemKindValue",         { fg = c.amber })
+  hi("CmpItemKindEnum",          { fg = c.yellow })
+  hi("CmpItemKindEnumMember",    { fg = c.amber })
+  hi("CmpItemKindOperator",      { fg = c.fg_dim })
+  hi("CmpItemKindReference",     { fg = c.purple })
+  hi("CmpItemKindTypeParameter", { fg = c.yellow })
+end
+
+return M
