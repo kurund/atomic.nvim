@@ -1,6 +1,7 @@
 local M = {}
 
 M.defaults = {
+	style = "default",
 	palette = {},
 	overrides = {},
 	plugins = {

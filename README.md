@@ -17,12 +17,28 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 }
 ```
 
+## Dark Variant
+
+Atomic ships with a dark variant that uses near-black backgrounds (`#080808`) instead of the default blue-teal. Great for OLED displays and high-contrast setups. All accent colors stay the same.
+
+```lua
+-- Option 1: Use the colorscheme command directly
+vim.cmd.colorscheme("atomic-dark")
+
+-- Option 2: Set the style via setup
+require("atomic").setup({ style = "dark" })
+vim.cmd.colorscheme("atomic")
+```
+
 ## Configuration
 
 Configuration is optional. Defaults work out of the box.
 
 ```lua
 require("atomic").setup({
+  -- Theme style: "default" (blue-teal) or "dark" (near-black)
+  style = "default",
+
   -- Override individual palette colors
   palette = {
     bg = "#000000",
@@ -66,6 +82,8 @@ vim.cmd.colorscheme("atomic")
 
 ## Palette
 
+### Default
+
 | Color      | Hex       |
 | ---------- | --------- |
 | bg         | `#162830` |
@@ -84,6 +102,20 @@ vim.cmd.colorscheme("atomic")
 | purple     | `#7b68b0` |
 | pink       | `#c47a98` |
 | amber      | `#d4953a` |
+
+### Dark
+
+| Color      | Hex       |
+| ---------- | --------- |
+| bg         | `#111111` |
+| bg_surface | `#1a1a1a` |
+| bg_border  | `#262626` |
+| bg_hl      | `#323232` |
+| fg         | `#f5ecd7` |
+| fg_dim     | `#d9cdb8` |
+| fg_muted   | `#6a6a6a` |
+
+Accent colors are shared across both variants.
 
 ## License
 

@@ -12,18 +12,21 @@ function M.load()
 		vim.cmd("syntax reset")
 	end
 
-	vim.g.colors_name = "atomic"
+	local config = require("atomic.config").options
+	local style = config.style or "default"
+
+	vim.g.colors_name = style == "dark" and "atomic-dark" or "atomic"
 	vim.o.termguicolors = true
 
-	local config = require("atomic.config").options
-	local palette = require("atomic.palette").get(config.palette)
+	local palette = require("atomic.palette").get(style, config.palette)
 
 	require("atomic.highlights").apply(palette, config)
 end
 
 function M.get_colors()
 	local config = require("atomic.config").options
-	return require("atomic.palette").get(config.palette)
+	local style = config.style or "default"
+	return require("atomic.palette").get(style, config.palette)
 end
 
 return M
