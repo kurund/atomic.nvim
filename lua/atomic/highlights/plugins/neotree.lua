@@ -12,6 +12,7 @@ function M.apply(hi, c)
   hi("NeoTreeGitDeleted",    { fg = c.red })
   hi("NeoTreeGitUntracked",  { fg = c.fg_muted })
   hi("NeoTreeIndentMarker",  { fg = c.bg_border })
+  hi("NeoTreeDimText",       { fg = c.fg_muted })
 end
 
 return M

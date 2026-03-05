@@ -25,6 +25,7 @@ function M.apply(c, config)
 		whichkey = "atomic.highlights.plugins.whichkey",
 		neotree = "atomic.highlights.plugins.neotree",
 		dashboard = "atomic.highlights.plugins.dashboard",
+		snacks = "atomic.highlights.plugins.snacks",
 	}
 
 	for name, mod in pairs(plugin_modules) do
