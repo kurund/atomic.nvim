@@ -3,7 +3,7 @@ local M = {}
 function M.apply(hi, c)
 	hi("Normal", { fg = c.fg, bg = c.bg })
 	hi("NormalFloat", { fg = c.fg, bg = c.bg_surface })
-	hi("FloatBorder", { fg = c.bg_border, bg = c.bg_surface })
+	hi("FloatBorder", { fg = c.fg_muted, bg = c.bg_surface })
 	hi("CursorLine", { bg = c.bg_surface })
 	hi("CursorColumn", { bg = c.bg_surface })
 	hi("ColorColumn", { bg = c.bg_surface })
@@ -54,6 +54,24 @@ function M.apply(hi, c)
 	hi("SpellCap", { sp = c.yellow, undercurl = true })
 	hi("SpellLocal", { sp = c.teal, undercurl = true })
 	hi("SpellRare", { sp = c.purple, undercurl = true })
+
+	-- Terminal ANSI colors (used by lazygit, etc.)
+	vim.g.terminal_color_0 = c.bg_border      -- black
+	vim.g.terminal_color_1 = c.red           -- red
+	vim.g.terminal_color_2 = c.green         -- green
+	vim.g.terminal_color_3 = c.yellow        -- yellow
+	vim.g.terminal_color_4 = c.blue          -- blue
+	vim.g.terminal_color_5 = c.purple        -- magenta
+	vim.g.terminal_color_6 = c.teal          -- cyan
+	vim.g.terminal_color_7 = c.fg            -- white
+	vim.g.terminal_color_8 = c.fg_dim        -- bright black
+	vim.g.terminal_color_9 = c.orange        -- bright red
+	vim.g.terminal_color_10 = c.green        -- bright green
+	vim.g.terminal_color_11 = c.yellow       -- bright yellow
+	vim.g.terminal_color_12 = c.blue         -- bright blue
+	vim.g.terminal_color_13 = c.pink         -- bright magenta
+	vim.g.terminal_color_14 = c.teal         -- bright cyan
+	vim.g.terminal_color_15 = c.fg           -- bright white
 end
 
 return M
