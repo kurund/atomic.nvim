@@ -13,6 +13,8 @@ function M.apply(hi, c)
 	hi("DiagnosticVirtualTextWarn", { fg = c.yellow, bg = c.diag_warn_bg })
 	hi("DiagnosticVirtualTextInfo", { fg = c.blue, bg = c.diag_info_bg })
 	hi("DiagnosticVirtualTextHint", { fg = c.teal, bg = c.diag_hint_bg })
+	hi("DiagnosticUnnecessary", { fg = c.fg_muted })
+	hi("DiagnosticDeprecated", { fg = c.fg_muted, strikethrough = true })
 end
 
 return M
