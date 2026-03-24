@@ -15,8 +15,13 @@ function M.load()
 	local config = require("atomic.config").options
 	local style = config.style or "default"
 
-	vim.g.colors_name = style == "dark" and "atomic-dark" or "atomic"
+	local style_names = {
+		dark = "atomic-dark",
+		light = "atomic-light",
+	}
+	vim.g.colors_name = style_names[style] or "atomic"
 	vim.o.termguicolors = true
+	vim.o.background = style == "light" and "light" or "dark"
 
 	local palette = require("atomic.palette").get(style, config.palette)
 
